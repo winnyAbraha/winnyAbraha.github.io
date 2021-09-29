@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Inventory</title>
+</head>
+<style>
+    .wi{
+        width: 1400px;
+    }
+    h5,h2{
+        text-align: center;
+    }
+    #btn{
+        margin-left: 49%;
+        background-color: rgb(75, 129, 17);
+        color: white
+    }
+</style>
+<body>
+    <h2>Inventory</h2>
+    <form>
+        <h5>Item Name</h5>
+    <input type="text" id="name" class="wi"/>
+    <br>
+    <h5>Item catagory</h5>
+    <input type="text" id="catagory" class="wi"/>
+    <br>
+    <h5>quantity</h5>
+    <input type="text" id="quantity" class="wi"/>
+    <br>
+</form>
+<br>
+<!-- <button type="button" onclick="insert()" id="btn">Try it</button> -->
+<input type ="submit" onclick="insert()" value="Try it" id = "btn"/> 
+<br><br>
+<table id="table" border="1" width = "1200px" style="border-collapse: collapse;">
+    <tr>
+    <th>Product Name</th>
+    <th>Category</th>
+    <th>Quantity</th>
+</tr>
+
+</table>
+</body>
+<script>
+    function insert(){
+        let name = document.getElementById('name')
+        let catagory = document.getElementById('catagory')
+        let quantity = document.getElementById('quantity')
+        let table = document.getElementById('table')
+        let row = table.insertRow()
+        let celi1 = row.insertCell(0)
+        let celi2 = row.insertCell(1)
+        let celi3 = row.insertCell(2)
+        celi1.innerHTML = name.value
+        celi2.innerHTML = catagory.value
+        celi3.innerHTML = quantity.value
+    }
+
+</script>
+</html>

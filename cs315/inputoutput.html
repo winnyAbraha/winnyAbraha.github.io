@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html >
+<head>
+   <title>number 1</title> 
+   <script> 
+    
+    function text(){
+      
+     document.getElementById('output').innerHTML = document.getElementById("input").value
+     document.getElementById("input").value = null
+    }
+    
+    </script>
+</head>
+<body>
+    <form>
+            <h4>Input</h4>
+        <input type="text" id="input"/>
+        <br><br>
+        output <br><br>
+        <textarea id="output"></textarea> <br><br>
+        
+    </form>
+    <input type="submit" onclick="text()" value="click here"/>
+
+</body>
+
+</html>

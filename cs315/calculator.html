@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>calculator</title>
+</head>
+<body>
+    <form>
+        First value<br><br>
+        <input type="number" id="one"/><br><br>
+        Second value<br><br>
+        <input type="number" id="two"/><br><br>
+    </form>
+    operartions:<br><br>
+    <input type="submit" value="+" onclick="addition()"/>
+    <input type="submit" value="-" onclick=" subtraction()"/>
+    <input type="submit" value="*" onclick="multi()"/>
+    <h4>Result</h4>
+    <h4 id="res"></h4>
+</body>
+<script>
+    
+    function addition(){
+        let res =  document.getElementById('res')
+        let one = Number(document.getElementById('one').value)
+        let two = Number(document.getElementById('two').value)
+        let sum = Number(one) + Number(two)
+       res.innerText = sum
+    }
+    function subtraction(){
+        let res =  document.getElementById('res')
+        let one = Number(document.getElementById('one').value)
+        let two = Number(document.getElementById('two').value)
+        let sum = Number(one) - Number(two)
+       res.innerText = sum
+    }
+    function multi(){
+        let res =  document.getElementById('res')
+        let one = Number(document.getElementById('one').value)
+        let two = Number(document.getElementById('two').value)
+        let sum = Number(one) * Number(two)
+       res.innerText = sum
+    }
+</script>
+</html>

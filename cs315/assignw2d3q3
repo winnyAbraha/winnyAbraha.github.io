@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>question 3</title>
+    <!-- <link rel="stylesheet" href="question3.css"> -->
+   <style>
+   .row{
+    display:flex;
+    flex-direction:column;
+     flex-wrap: nowrap; 
+     align-content: stretch;
+}
+.row .column{
+    display:flex;
+}</style> .
+  
+  
+</head>
+<body>
+    <body>
+
+        
+        <div class="row"> 
+          <div class="column">
+          
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHUoaktYiz1TV7xbhLC-ebTKqD_9WuTSzbUg&usqp=CAU" style="width:100%">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHUoaktYiz1TV7xbhLC-ebTKqD_9WuTSzbUg&usqp=CAU" style="width:100%">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHUoaktYiz1TV7xbhLC-ebTKqD_9WuTSzbUg&usqp=CAU" style="width:100%">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEAT-zSKZGoKbvxIYErpU_Tzz0rAOW8Fotmw&usqp=CAU" style="width:100%">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqfbNtDjtrsaRoiYIQl_tzLAuSBSkdve7l2Q&usqp=CAU" style="width:100%">
+          </div>
+          
+          <div class="column">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdC3a9GRduSkFb3DmkzZ5celqO73KDWgMidg&usqp=CAU" style="width:100%">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJNoBX7A_RTD6arPDFoCRMIggnwsWotAxUXg&usqp=CAU" style="width:100%">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTggDMgev3a8SrtNsUXV8V5EkXolX5S7vREnw&usqp=CAU" style="width:100%">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSopvnNyq6uje7aPEyHT4kLtsuaMIg_qzg6wQ&usqp=CAU" style="width:100%">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSopvnNyq6uje7aPEyHT4kLtsuaMIg_qzg6wQ&usqp=CAU" style="width:100%">
+            <!-- <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_Mr1iw8sHPP1uD217tt4btR3swhV3BxqU0g&usqp=CAU" style="width:100%"> -->
+          </div> 
+        </div>    
+        
+        </body>
+        </html>
+</body>
+</html>

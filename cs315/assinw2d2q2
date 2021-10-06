@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>question 2</title>
+    <!-- <link rel="stylesheet" href="question2.css"> -->
+    <style>.container{
+        display:flex;
+        flex-direction: column;
+        background-color:rgb(192, 225, 240); 
+     }
+     .container > div {
+         background-color: black;
+        margin: 100px;
+        color:white  ;
+        height: 10px;
+        font-size: 70px;
+        padding: 100px;
+        text-align: center;
+        }
+     .rows{
+         display:flex;
+     
+        
+     }
+     
+     .btn{
+         font-size: 50px;  
+       background-color: rgb(64, 160, 224);
+       border-radius: 30%;
+     }
+     #btn2{
+         float:left;
+         margin-right: 550px;
+         margin-left: 2000px;
+     }
+     #log2{
+         margin-left: 1400px;
+     }
+     .inner{
+        float: right;
+     }
+     #btn1, #btn3{
+         margin-left: 4000px;
+     }
+     #firstrow,.inner{
+         margin-left: 100px;
+     }
+     #midd{
+         margin-left: 100px  
+     }</style>
+</head>
+<body>
+    <div class="container">
+        <div class= "rows" id="firstrow">
+            <div >LOGOBAKERY </div>
+            <div class ="inner">Home </div>
+            <div class ="inner">Menu </div>
+            <div class ="inner">View</div>
+            <div><button class= "btn" class ="inner" id="btn1" >Order</button> </div>
+
+        </div>
+        <div class= "rows" id="secondtrow">
+            
+
+            <div id="midd">Home </div>
+            <div id="midd" >Menu </div>
+            <div id="midd">View</div>
+            <div><button class= "btn" id="btn2" >Order </button></div>
+            <div id="log2">LOGOBAKERY </div>
+        </div>
+        <div class= "rows" id="thirdrow">
+            <div>LOGOBAKERY </div>
+            <div class ="inner">Home </div>
+            <div class ="inner">Menu </div>
+            <div class ="inner">View</div>
+            <div><button class= "btn" id="btn3" >Order</button> </div>
+
+        </div>
+
+    </div>
+</body>
+</html>

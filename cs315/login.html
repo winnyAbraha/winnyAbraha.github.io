@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Muli:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/style-with-prefix.css">
+    <style>
+        .srouce{
+            text-align: center;
+            color: #ffffff;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="main-container ">
+        <div class="form-container">
+                <div action="" class="the-form">
+
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" placeholder="Enter your email" pattern="/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/" required>
+
+                    <label for="password">Password</label>
+                    <input type="password" name="password" id="password" placeholder="Enter your password" required>
+
+                    <input   type="submit" value="Log In" onclick="submit()"/>
+
+                </div>
+
+            </div>
+
+            <div class="form-footer">
+                <div>
+                    <span>Don't have an account?</span> <a href="./signup.html">Sign Up</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script>
+        
+         function submit(){
+
+            
+             let email = document.getElementById("email").value
+             let pwd = document.getElementById("password").value
+            
+             if(email === "" || pwd === ""){
+                 alert("Please fill the required fields")
+             }
+
+             else if(!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)){
+                 alert("please enter valid email address")
+                 document.getElementById("email").value = ""
+                 document.getElementById("password").value = ""
+             }
+             
+             else if(email ==='manager@email.com'){
+                window.location.href="inventory.html";
+             }
+                 
+             else{
+                window.location.href="home.html";
+             }
+                
+         }
+
+    </script>
+    </html>
+
+</body>
+</html>

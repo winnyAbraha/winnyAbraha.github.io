@@ -2,18 +2,18 @@ const { from } = rxjs;
 const { filter } = rxjs.operators;
 window.onload = function () {
    
-    document.getElementById('searchbtn').addEventListener('click', userFetch)
+    document.getElementById('searchbtn').addEventListener('click', usersData)
 }
-async function userFetch() {
+async function usersData() {
 
     let result = await fetch('https://jsonplaceholder.typicode.com/users')
     let res = await result.json()
     document.getElementById('col').innerHTML = ""
     document.getElementById('col2').innerHTML = ""
 
-    postEmployees(res)
+    showUinfo(res)
 }
-function postEmployees(users) {
+function showUinfo(users) {
     let inputId = +document.getElementById('userinput').value;
    
     from(users).pipe(
@@ -33,8 +33,7 @@ function postEmployees(users) {
            
            `;
         let importPost = fetch('https://jsonplaceholder.typicode.com/posts?userId=' + inputId)
-        importPost.then(x => x.json()).then(p => showPosts(p))
-
+        importPost.then(x => x.json()).then(data => userPosts(data))
 
         let row = document.createElement('div');
         row.className = 'row';
@@ -43,13 +42,14 @@ function postEmployees(users) {
 
     })
 }
-function showPosts(p){
+function userPosts(data){
     
     let innerdiv = document.getElementById('col');
     let head1 = document.createElement('h4')
-    head1.innerHTML = 'POSTS'
+    head1.innerHTML = 'User Posts'
+    head1.className = 'offset-5'
     innerdiv.appendChild(head1)
-    from(p).subscribe(data=>{
+    from(data).subscribe(data=>{
      let post = `
        <div class="col">
        
@@ -59,44 +59,47 @@ function showPosts(p){
        
        `;
     let row = document.createElement('div');
-    let hr = document.createElement('hr')
+    let h1 = document.createElement('h1')
        row.className = 'row';
        row.innerHTML = post;
        let btn2 = document.createElement('button')
+       let hr = document.createElement('hr')
        row.appendChild(btn2)
+       row.appendChild(h1)
        row.appendChild(hr)
-       btn2.onclick = createDetail
+       btn2.onclick = function (){showComments(data.id)}
        btn2.className = "btn btn-warning";
-       btn2.innerHTML = "Show Comment";
+       btn2.innerHTML = " See Comments " ;
        innerdiv.appendChild(row);
     })
 }
-function createDetail(){
-   
-    let inputId = +document.getElementById('userinput').value;
+function showComments(id){
     
     let innerdiv = document.getElementById('col2');
     innerdiv.innerHTML=""
     let head2 = document.createElement('h4')
-    head2.innerHTML = 'Comments'
+    head2.innerHTML = 'Post Comments'
+    head2.className = 'offset-5'
     innerdiv.appendChild(head2)
-    from(fetch('https://jsonplaceholder.typicode.com/comments?postId='+inputId).then(x=>x.json()))
-    .subscribe(data=>{
+    from(fetch('https://jsonplaceholder.typicode.com/comments?postId='+id).then(x=>x.json()))
+    .subscribe(comments=>{
      
-     data.forEach(com=>{
+     comments.forEach(pcomment=>{
        
          let post = `
             <div class="col">
-            <p class="text-end"><b>Name: ${com.name}</b></p>
-            <p class="text-end"><b>email: ${com.email}</b></p>
-            <p class="text-end">Comment: ${com.body}</p>
+            <p class="text-end"><b>Name: ${pcomment.name}</b></p>
+            <p class="text-end"><b>email: ${pcomment.email}</b></p>
+            <p class="text-end">Comment: ${pcomment.body}</p>
             </div>
             
             `;
          let row = document.createElement('div');
+         let h2 = document.createElement('h2')
          let hr = document.createElement('hr')
             row.className = 'row';
             row.innerHTML = post;
+            row.appendChild(h2)
             row.appendChild(hr)
             innerdiv.appendChild(row);
      })
